@@ -1,0 +1,12 @@
+import os
+from fastapi import UploadFile
+
+async def save_uploaded_file(file: UploadFile, dest_dir: str) -> str:
+    """
+    Saves an uploaded file to the given destination directory and returns the full path.
+    """
+    os.makedirs(dest_dir, exist_ok=True)
+    dest_path = os.path.join(dest_dir, file.filename)
+    with open(dest_path, "wb") as f:
+        f.write(await file.read())
+    return dest_path
