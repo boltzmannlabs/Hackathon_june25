@@ -1,0 +1,53 @@
+2025-06-16 10:51:10,034 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 10:51:10,034 - WorkflowExecutor - INFO - WORKFLOW EXECUTION STARTED
+2025-06-16 10:51:10,034 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 10:51:10,034 - WorkflowExecutor - INFO - Loading /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/tool_space.json...
+2025-06-16 10:51:10,035 - WorkflowExecutor - INFO - Successfully loaded 6 tools from tool_space.json
+2025-06-16 10:51:10,035 - WorkflowExecutor - INFO - BUILDING WORKFLOW GRAPH
+2025-06-16 10:51:10,048 - WorkflowExecutor - INFO - Workflow compiled successfully
+2025-06-16 10:51:10,049 - WorkflowExecutor - INFO - STARTING WORKFLOW EXECUTION
+2025-06-16 10:51:10,049 - WorkflowExecutor - INFO - Initial query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19
+2025-06-16 10:51:10,049 - WorkflowExecutor - INFO - Invoking workflow agent...
+2025-06-16 10:51:10,064 - WorkflowExecutor - INFO - ANALYZING QUERY
+2025-06-16 10:51:10,065 - WorkflowExecutor - INFO - EXECUTION LOG - query_analysis: Analyzing query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19...
+2025-06-16 10:51:10,065 - WorkflowExecutor - INFO - QUERY ANALYSIS RESULT: Path = complex_task, Reason = Contains complex task keywords
+2025-06-16 10:51:10,065 - WorkflowExecutor - INFO - EXECUTION LOG - path_decision: Selected path: complex_task - Contains complex task keywords
+2025-06-16 10:51:10,066 - WorkflowExecutor - INFO - EXECUTING: task_generation
+2025-06-16 10:51:10,067 - WorkflowExecutor - INFO - EXECUTION LOG - task_generation_start: Starting task generation and planning
+2025-06-16 10:51:10,070 - langchain_aws.llms.bedrock - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 10:51:32,082 - WorkflowExecutor - INFO - EXECUTION LOG - task_generation_complete: Generated plan
+2025-06-16 10:51:32,084 - WorkflowExecutor - INFO - EXECUTING: code_generation
+2025-06-16 10:51:32,084 - WorkflowExecutor - INFO - EXECUTION LOG - code_generation_start: Starting code generation
+2025-06-16 10:51:32,084 - WorkflowExecutor - INFO - EXTRACTING TOOL CALLS FROM PLAN
+2025-06-16 10:51:32,086 - langchain_aws.llms.bedrock - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 10:51:34,176 - WorkflowExecutor - INFO - Successfully extracted 6 tools: ['fetch_and_process_viral_protein_sequence', 'predict_epitopes_from_fasta', 'design_mrna_constructs_from_epitopes', 'optimize_mrna_sequence', 'analyze_rna_secondary_structure', 'analyze_mrna_immunogenicity_and_safety']
+2025-06-16 10:51:34,176 - WorkflowExecutor - INFO - EXECUTION LOG - tool_extraction: Extracted 6 tools: ['fetch_and_process_viral_protein_sequence', 'predict_epitopes_from_fasta', 'design_mrna_constructs_from_epitopes', 'optimize_mrna_sequence', 'analyze_rna_secondary_structure', 'analyze_mrna_immunogenicity_and_safety']
+2025-06-16 10:51:34,178 - langchain_aws.llms.bedrock - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 10:51:41,870 - langchain_aws.llms.bedrock - ERROR - Error raised by bedrock service
+Traceback (most recent call last):
+  File "/home/ubuntu/prasanna/internal_hackathon/hack_env/lib/python3.10/site-packages/langchain_aws/llms/bedrock.py", line 941, in _prepare_input_and_invoke
+    response = self.client.invoke_model(**request_options)
+  File "/home/ubuntu/prasanna/internal_hackathon/hack_env/lib/python3.10/site-packages/botocore/client.py", line 598, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/ubuntu/prasanna/internal_hackathon/hack_env/lib/python3.10/site-packages/botocore/context.py", line 123, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/prasanna/internal_hackathon/hack_env/lib/python3.10/site-packages/botocore/client.py", line 1061, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.ThrottlingException: An error occurred (ThrottlingException) when calling the InvokeModel operation (reached max retries: 4): Too many requests, please wait before trying again.
+2025-06-16 10:51:41,872 - langchain_core.callbacks.manager - WARNING - Error in LangChainTracer.on_llm_error callback: TracerException('No indexed run ID 612f42d9-bf13-4cee-90be-abaab2b5bf34.')
+2025-06-16 10:51:41,872 - WorkflowExecutor - ERROR - Error in code_generation: An error occurred (ThrottlingException) when calling the InvokeModel operation (reached max retries: 4): Too many requests, please wait before trying again.
+2025-06-16 10:51:41,872 - WorkflowExecutor - INFO - EXECUTION LOG - code_generation_error: Error: An error occurred (ThrottlingException) when calling the InvokeModel operation (reached max retries: 4): Too many requests, please wait before trying again.
+2025-06-16 10:51:41,874 - WorkflowExecutor - INFO - EXECUTING: code_execution
+2025-06-16 10:51:41,874 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_start: Starting code execution
+2025-06-16 10:51:41,874 - WorkflowExecutor - WARNING - No code to execute
+2025-06-16 10:51:41,874 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_complete: No code provided
+2025-06-16 10:51:41,875 - WorkflowExecutor - INFO - SHOULD_CONTINUE: Current run_test status = end
+2025-06-16 10:51:41,875 - WorkflowExecutor - INFO - EXECUTION LOG - flow_decision: Flow decision: end
+2025-06-16 10:51:41,877 - WorkflowExecutor - INFO - EXECUTING: result_analysis
+2025-06-16 10:51:41,877 - WorkflowExecutor - INFO - EXECUTION LOG - result_analysis_start: Starting result analysis and report generation
+2025-06-16 10:51:41,877 - WorkflowExecutor - INFO - Result analysis completed successfully
+2025-06-16 10:51:41,877 - WorkflowExecutor - INFO - EXECUTION LOG - result_analysis_complete: Generated final report
+2025-06-16 10:51:41,879 - WorkflowExecutor - INFO - WORKFLOW EXECUTION COMPLETED SUCCESSFULLY
+2025-06-16 10:51:41,880 - WorkflowExecutor - INFO - Report saved to: /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/logs/workflow_report_20250616_105141.txt
+2025-06-16 10:51:41,880 - WorkflowExecutor - INFO - WORKFLOW EXECUTION FINISHED
+2025-06-16 10:51:41,880 - WorkflowExecutor - INFO - ============================================================

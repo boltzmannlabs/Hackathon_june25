@@ -1,0 +1,283 @@
+2025-06-16 09:40:07,269 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 09:40:07,269 - WorkflowExecutor - INFO - WORKFLOW EXECUTION STARTED
+2025-06-16 09:40:07,269 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 09:40:07,269 - WorkflowExecutor - INFO - Loading tool_space.json...
+2025-06-16 09:40:07,270 - WorkflowExecutor - INFO - Successfully loaded 6 tools from tool_space.json
+2025-06-16 09:40:07,270 - WorkflowExecutor - INFO - BUILDING WORKFLOW GRAPH
+2025-06-16 09:40:07,271 - WorkflowExecutor - INFO - Added all nodes to workflow
+2025-06-16 09:40:07,272 - WorkflowExecutor - INFO - Added all edges to workflow
+2025-06-16 09:40:07,288 - WorkflowExecutor - INFO - Workflow compiled successfully
+2025-06-16 09:40:07,289 - WorkflowExecutor - INFO - STARTING WORKFLOW EXECUTION
+2025-06-16 09:40:07,289 - WorkflowExecutor - INFO - Initial query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19
+2025-06-16 09:40:07,289 - WorkflowExecutor - INFO - Invoking workflow agent...
+2025-06-16 09:40:07,301 - WorkflowExecutor - INFO - ANALYZING QUERY
+2025-06-16 09:40:07,302 - WorkflowExecutor - INFO - Input query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19
+2025-06-16 09:40:07,302 - WorkflowExecutor - INFO - EXECUTION LOG - query_analysis: Analyzing query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19...
+2025-06-16 09:40:07,302 - WorkflowExecutor - INFO - QUERY ANALYSIS RESULT: Path = complex_task, Reason = Contains complex task keywords
+2025-06-16 09:40:07,302 - WorkflowExecutor - INFO - EXECUTION LOG - path_decision: Selected path: complex_task - Contains complex task keywords
+2025-06-16 09:40:07,304 - WorkflowExecutor - INFO - EXECUTING: task_generation
+2025-06-16 09:40:07,304 - WorkflowExecutor - INFO - EXECUTION LOG - task_generation_start: Starting task generation and planning
+2025-06-16 09:40:07,305 - WorkflowExecutor - INFO - Sending query to LLM for task planning...
+2025-06-16 09:40:07,307 - langchain_aws.llms.bedrock - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 09:40:30,336 - WorkflowExecutor - INFO - Task plan generated successfully. Length: 3879 characters
+2025-06-16 09:40:30,337 - WorkflowExecutor - INFO - EXECUTION LOG - task_generation_complete: Generated plan with 3879 characters
+2025-06-16 09:40:30,337 - WorkflowExecutor - INFO - Plan preview: # Computational Plan for mRNA Vaccine Synthesis Analysis: COVID-19 Case Study |  | ## Overview | This analysis will demonstrate a complete mRNA vaccine synthesis workflow using agents and machine learning for COVID-19, focusing on the SARS-CoV-2 spike protein as the primary target antigen. | 
+2025-06-16 09:40:30,339 - WorkflowExecutor - INFO - EXECUTING: code_generation
+2025-06-16 09:40:30,339 - WorkflowExecutor - INFO - EXECUTION LOG - code_generation_start: Starting code generation
+2025-06-16 09:40:30,339 - WorkflowExecutor - INFO - EXTRACTING TOOL CALLS FROM PLAN
+2025-06-16 09:40:30,339 - WorkflowExecutor - INFO - Sending plan to LLM for tool extraction...
+2025-06-16 09:40:30,342 - langchain_aws.llms.bedrock - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 09:40:32,581 - WorkflowExecutor - INFO - LLM response for tool extraction: ["fetch_and_process_viral_protein_sequence", "predict_epitopes_from_fasta", "design_mrna_constructs_from_epitopes", "optimize_mrna_sequence", "analyze_rna_secondary_structure", "analyze_mrna_immunogenicity_and_safety"]
+2025-06-16 09:40:32,581 - WorkflowExecutor - INFO - Successfully extracted 6 tools: ['fetch_and_process_viral_protein_sequence', 'predict_epitopes_from_fasta', 'design_mrna_constructs_from_epitopes', 'optimize_mrna_sequence', 'analyze_rna_secondary_structure', 'analyze_mrna_immunogenicity_and_safety']
+2025-06-16 09:40:32,581 - WorkflowExecutor - INFO - EXECUTION LOG - tool_extraction: Extracted 6 tools: ['fetch_and_process_viral_protein_sequence', 'predict_epitopes_from_fasta', 'design_mrna_constructs_from_epitopes', 'optimize_mrna_sequence', 'analyze_rna_secondary_structure', 'analyze_mrna_immunogenicity_and_safety']
+2025-06-16 09:40:32,582 - WorkflowExecutor - INFO - Sending tool list to LLM for code generation...
+2025-06-16 09:40:50,177 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 09:40:50,188 - WorkflowExecutor - INFO - Code generated successfully. Length: 4211 characters
+2025-06-16 09:40:50,188 - WorkflowExecutor - INFO - EXECUTION LOG - code_generation_complete: Generated 4211 characters of code
+2025-06-16 09:40:50,188 - WorkflowExecutor - INFO - Code preview: from step1 import main as fetch_and_process_viral_protein_sequence | from step2 import main as predict_epitopes_from_fasta | from step3 import main as design_mrna_constructs_from_epitopes
+2025-06-16 09:40:50,190 - WorkflowExecutor - INFO - EXECUTING: code_execution
+2025-06-16 09:40:50,190 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_start: Starting code execution
+2025-06-16 09:40:50,190 - WorkflowExecutor - INFO - Executing code with 6 tools
+2025-06-16 09:40:50,191 - WorkflowExecutor - INFO - Created main code file: /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py
+2025-06-16 09:40:50,191 - WorkflowExecutor - INFO - EXECUTION LOG - temp_file_created: Created temporary execution file: None
+2025-06-16 09:40:50,191 - WorkflowExecutor - INFO - Starting subprocess execution...
+2025-06-16 09:40:54,505 - WorkflowExecutor - INFO - Subprocess completed in 4.31 seconds
+2025-06-16 09:40:54,505 - WorkflowExecutor - INFO - Return code: 1
+2025-06-16 09:40:54,505 - WorkflowExecutor - INFO - STDOUT length: 484 characters
+2025-06-16 09:40:54,505 - WorkflowExecutor - INFO - STDERR length: 2203 characters
+2025-06-16 09:40:54,506 - WorkflowExecutor - ERROR - Code execution failed with return code 1
+2025-06-16 09:40:54,506 - WorkflowExecutor - ERROR - STDERR: INFO:step1:Searching for: SARS-CoV-2 spike protein
+INFO:step1:Found 10 results
+INFO:step1:Fetching 9FC2_B from NCBI protein database
+INFO:step1:Successfully fetched sequence: 125 residues
+INFO:step1:Cleaning sequence...
+INFO:step1:Sequence cleaned: 125 -> 125 residues
+INFO:step3:Loaded 42 epitopes from epitope_predictions.csv
+INFO:step3:Selected 30 epitopes for construct design
+INFO:step3:Designed 30 single-epitope constructs
+INFO:step3:Designed 3 multi-epitope constructs using mixed strategy
+INFO:step3:Designed 1 multi-epitope constructs using protein_grouped strategy
+INFO:step3:Selected 10 constructs from portfolio optimization
+INFO:step3:Exported 10 constructs to output_mrna.fasta
+INFO:step3:Exported 10 constructs to output_protein.fasta
+INFO:step3:Exported construct details to output_constructs.csv
+INFO:step3:Generated construct report: output_report.txt
+Traceback (most recent call last):
+  File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 117, in <module>
+    main_pipeline()
+  File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 112, in main_pipeline
+    json.dump(results, f, indent=2)
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type mRNAConstruct is not JSON serializable
+
+2025-06-16 09:40:54,506 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_failed: Failed with return code 1
+2025-06-16 09:40:54,507 - WorkflowExecutor - INFO - SHOULD_CONTINUE: Current run_test status = debug
+2025-06-16 09:40:54,507 - WorkflowExecutor - INFO - EXECUTION LOG - flow_decision: Flow decision: debug
+2025-06-16 09:40:54,509 - WorkflowExecutor - INFO - EXECUTING: debug_code
+2025-06-16 09:40:54,509 - WorkflowExecutor - INFO - EXECUTION LOG - debug_start: Starting code debugging
+2025-06-16 09:40:54,509 - WorkflowExecutor - INFO - Debugging error: INFO:step1:Searching for: SARS-CoV-2 spike protein
+INFO:step1:Found 10 results
+INFO:step1:Fetching 9FC2_B from NCBI protein database
+INFO:step1:Successfully fetched sequence: 125 residues
+INFO:step1:C...
+2025-06-16 09:40:54,509 - WorkflowExecutor - ERROR - Error during debugging: name 'clientss' is not defined
+2025-06-16 09:40:54,509 - WorkflowExecutor - INFO - EXECUTION LOG - debug_error: Debug failed: name 'clientss' is not defined
+2025-06-16 09:40:54,511 - WorkflowExecutor - INFO - EXECUTING: code_execution
+2025-06-16 09:40:54,511 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_start: Starting code execution
+2025-06-16 09:40:54,511 - WorkflowExecutor - INFO - Executing code with 6 tools
+2025-06-16 09:40:54,512 - WorkflowExecutor - INFO - Created main code file: /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py
+2025-06-16 09:40:54,512 - WorkflowExecutor - INFO - EXECUTION LOG - temp_file_created: Created temporary execution file: None
+2025-06-16 09:40:54,512 - WorkflowExecutor - INFO - Starting subprocess execution...
+2025-06-16 09:40:58,301 - WorkflowExecutor - INFO - Subprocess completed in 3.79 seconds
+2025-06-16 09:40:58,301 - WorkflowExecutor - INFO - Return code: 1
+2025-06-16 09:40:58,301 - WorkflowExecutor - INFO - STDOUT length: 484 characters
+2025-06-16 09:40:58,301 - WorkflowExecutor - INFO - STDERR length: 2203 characters
+2025-06-16 09:40:58,301 - WorkflowExecutor - ERROR - Code execution failed with return code 1
+2025-06-16 09:40:58,301 - WorkflowExecutor - ERROR - STDERR: INFO:step1:Searching for: SARS-CoV-2 spike protein
+INFO:step1:Found 10 results
+INFO:step1:Fetching 9FC2_B from NCBI protein database
+INFO:step1:Successfully fetched sequence: 125 residues
+INFO:step1:Cleaning sequence...
+INFO:step1:Sequence cleaned: 125 -> 125 residues
+INFO:step3:Loaded 42 epitopes from epitope_predictions.csv
+INFO:step3:Selected 30 epitopes for construct design
+INFO:step3:Designed 30 single-epitope constructs
+INFO:step3:Designed 3 multi-epitope constructs using mixed strategy
+INFO:step3:Designed 1 multi-epitope constructs using protein_grouped strategy
+INFO:step3:Selected 10 constructs from portfolio optimization
+INFO:step3:Exported 10 constructs to output_mrna.fasta
+INFO:step3:Exported 10 constructs to output_protein.fasta
+INFO:step3:Exported construct details to output_constructs.csv
+INFO:step3:Generated construct report: output_report.txt
+Traceback (most recent call last):
+  File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 117, in <module>
+    main_pipeline()
+  File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 112, in main_pipeline
+    json.dump(results, f, indent=2)
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type mRNAConstruct is not JSON serializable
+
+2025-06-16 09:40:58,302 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_failed: Failed with return code 1
+2025-06-16 09:40:58,302 - WorkflowExecutor - INFO - SHOULD_CONTINUE: Current run_test status = debug
+2025-06-16 09:40:58,303 - WorkflowExecutor - INFO - EXECUTION LOG - flow_decision: Flow decision: debug
+2025-06-16 09:40:58,305 - WorkflowExecutor - INFO - EXECUTING: debug_code
+2025-06-16 09:40:58,305 - WorkflowExecutor - INFO - EXECUTION LOG - debug_start: Starting code debugging
+2025-06-16 09:40:58,305 - WorkflowExecutor - INFO - Debugging error: INFO:step1:Searching for: SARS-CoV-2 spike protein
+INFO:step1:Found 10 results
+INFO:step1:Fetching 9FC2_B from NCBI protein database
+INFO:step1:Successfully fetched sequence: 125 residues
+INFO:step1:C...
+2025-06-16 09:40:58,305 - WorkflowExecutor - ERROR - Error during debugging: name 'clientss' is not defined
+2025-06-16 09:40:58,305 - WorkflowExecutor - INFO - EXECUTION LOG - debug_error: Debug failed: name 'clientss' is not defined
+2025-06-16 09:40:58,307 - WorkflowExecutor - INFO - EXECUTING: code_execution
+2025-06-16 09:40:58,307 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_start: Starting code execution
+2025-06-16 09:40:58,307 - WorkflowExecutor - INFO - Executing code with 6 tools
+2025-06-16 09:40:58,307 - WorkflowExecutor - INFO - Created main code file: /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py
+2025-06-16 09:40:58,308 - WorkflowExecutor - INFO - EXECUTION LOG - temp_file_created: Created temporary execution file: None
+2025-06-16 09:40:58,308 - WorkflowExecutor - INFO - Starting subprocess execution...
+2025-06-16 09:41:02,008 - WorkflowExecutor - INFO - Subprocess completed in 3.70 seconds
+2025-06-16 09:41:02,008 - WorkflowExecutor - INFO - Return code: 1
+2025-06-16 09:41:02,008 - WorkflowExecutor - INFO - STDOUT length: 484 characters
+2025-06-16 09:41:02,008 - WorkflowExecutor - INFO - STDERR length: 2203 characters
+2025-06-16 09:41:02,008 - WorkflowExecutor - ERROR - Code execution failed with return code 1
+2025-06-16 09:41:02,008 - WorkflowExecutor - ERROR - STDERR: INFO:step1:Searching for: SARS-CoV-2 spike protein
+INFO:step1:Found 10 results
+INFO:step1:Fetching 9FC2_B from NCBI protein database
+INFO:step1:Successfully fetched sequence: 125 residues
+INFO:step1:Cleaning sequence...
+INFO:step1:Sequence cleaned: 125 -> 125 residues
+INFO:step3:Loaded 42 epitopes from epitope_predictions.csv
+INFO:step3:Selected 30 epitopes for construct design
+INFO:step3:Designed 30 single-epitope constructs
+INFO:step3:Designed 3 multi-epitope constructs using mixed strategy
+INFO:step3:Designed 1 multi-epitope constructs using protein_grouped strategy
+INFO:step3:Selected 10 constructs from portfolio optimization
+INFO:step3:Exported 10 constructs to output_mrna.fasta
+INFO:step3:Exported 10 constructs to output_protein.fasta
+INFO:step3:Exported construct details to output_constructs.csv
+INFO:step3:Generated construct report: output_report.txt
+Traceback (most recent call last):
+  File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 117, in <module>
+    main_pipeline()
+  File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 112, in main_pipeline
+    json.dump(results, f, indent=2)
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type mRNAConstruct is not JSON serializable
+
+2025-06-16 09:41:02,009 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_failed: Failed with return code 1
+2025-06-16 09:41:02,011 - WorkflowExecutor - INFO - SHOULD_CONTINUE: Current run_test status = debug
+2025-06-16 09:41:02,011 - WorkflowExecutor - INFO - EXECUTION LOG - flow_decision: Flow decision: debug
+2025-06-16 09:41:02,013 - WorkflowExecutor - INFO - EXECUTING: debug_code
+2025-06-16 09:41:02,014 - WorkflowExecutor - INFO - EXECUTION LOG - debug_start: Starting code debugging
+2025-06-16 09:41:02,014 - WorkflowExecutor - INFO - Debugging error: INFO:step1:Searching for: SARS-CoV-2 spike protein
+INFO:step1:Found 10 results
+INFO:step1:Fetching 9FC2_B from NCBI protein database
+INFO:step1:Successfully fetched sequence: 125 residues
+INFO:step1:C...
+2025-06-16 09:41:02,014 - WorkflowExecutor - ERROR - Error during debugging: name 'clientss' is not defined
+2025-06-16 09:41:02,014 - WorkflowExecutor - INFO - EXECUTION LOG - debug_error: Debug failed: name 'clientss' is not defined
+2025-06-16 09:41:02,016 - WorkflowExecutor - INFO - EXECUTING: code_execution
+2025-06-16 09:41:02,016 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_start: Starting code execution
+2025-06-16 09:41:02,016 - WorkflowExecutor - INFO - Executing code with 6 tools
+2025-06-16 09:41:02,016 - WorkflowExecutor - INFO - Created main code file: /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py
+2025-06-16 09:41:02,016 - WorkflowExecutor - INFO - EXECUTION LOG - temp_file_created: Created temporary execution file: None
+2025-06-16 09:41:02,016 - WorkflowExecutor - INFO - Starting subprocess execution...
+2025-06-16 09:41:07,952 - WorkflowExecutor - INFO - Subprocess completed in 5.94 seconds
+2025-06-16 09:41:07,952 - WorkflowExecutor - INFO - Return code: 1
+2025-06-16 09:41:07,952 - WorkflowExecutor - INFO - STDOUT length: 484 characters
+2025-06-16 09:41:07,952 - WorkflowExecutor - INFO - STDERR length: 2203 characters
+2025-06-16 09:41:07,952 - WorkflowExecutor - ERROR - Code execution failed with return code 1
+2025-06-16 09:41:07,952 - WorkflowExecutor - ERROR - STDERR: INFO:step1:Searching for: SARS-CoV-2 spike protein
+INFO:step1:Found 10 results
+INFO:step1:Fetching 9FC2_B from NCBI protein database
+INFO:step1:Successfully fetched sequence: 125 residues
+INFO:step1:Cleaning sequence...
+INFO:step1:Sequence cleaned: 125 -> 125 residues
+INFO:step3:Loaded 42 epitopes from epitope_predictions.csv
+INFO:step3:Selected 30 epitopes for construct design
+INFO:step3:Designed 30 single-epitope constructs
+INFO:step3:Designed 3 multi-epitope constructs using mixed strategy
+INFO:step3:Designed 1 multi-epitope constructs using protein_grouped strategy
+INFO:step3:Selected 10 constructs from portfolio optimization
+INFO:step3:Exported 10 constructs to output_mrna.fasta
+INFO:step3:Exported 10 constructs to output_protein.fasta
+INFO:step3:Exported construct details to output_constructs.csv
+INFO:step3:Generated construct report: output_report.txt
+Traceback (most recent call last):
+  File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 117, in <module>
+    main_pipeline()
+  File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 112, in main_pipeline
+    json.dump(results, f, indent=2)
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type mRNAConstruct is not JSON serializable
+
+2025-06-16 09:41:07,952 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_failed: Failed with return code 1
+2025-06-16 09:41:07,953 - WorkflowExecutor - INFO - SHOULD_CONTINUE: Current run_test status = debug
+2025-06-16 09:41:07,953 - WorkflowExecutor - INFO - EXECUTION LOG - flow_decision: Flow decision: debug
+2025-06-16 09:41:07,955 - WorkflowExecutor - INFO - EXECUTING: debug_code
+2025-06-16 09:41:07,955 - WorkflowExecutor - INFO - EXECUTION LOG - debug_start: Starting code debugging
+2025-06-16 09:41:07,955 - WorkflowExecutor - INFO - Debugging error: INFO:step1:Searching for: SARS-CoV-2 spike protein
+INFO:step1:Found 10 results
+INFO:step1:Fetching 9FC2_B from NCBI protein database
+INFO:step1:Successfully fetched sequence: 125 residues
+INFO:step1:C...
+2025-06-16 09:41:07,955 - WorkflowExecutor - ERROR - Error during debugging: name 'clientss' is not defined
+2025-06-16 09:41:07,955 - WorkflowExecutor - INFO - EXECUTION LOG - debug_error: Debug failed: name 'clientss' is not defined
+2025-06-16 09:41:07,957 - WorkflowExecutor - INFO - EXECUTING: code_execution
+2025-06-16 09:41:07,957 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_start: Starting code execution
+2025-06-16 09:41:07,957 - WorkflowExecutor - INFO - Executing code with 6 tools
+2025-06-16 09:41:07,957 - WorkflowExecutor - INFO - Created main code file: /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py
+2025-06-16 09:41:07,957 - WorkflowExecutor - INFO - EXECUTION LOG - temp_file_created: Created temporary execution file: None
+2025-06-16 09:41:07,957 - WorkflowExecutor - INFO - Starting subprocess execution...

@@ -1,0 +1,148 @@
+2025-06-16 11:48:16,980 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 11:48:16,980 - WorkflowExecutor - INFO - WORKFLOW EXECUTION STARTED
+2025-06-16 11:48:16,980 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 11:48:16,980 - WorkflowExecutor - INFO - Loading tool_space.json...
+2025-06-16 11:48:16,981 - WorkflowExecutor - INFO - Successfully loaded 6 tools from tool_space.json
+2025-06-16 11:48:16,981 - WorkflowExecutor - INFO - BUILDING WORKFLOW GRAPH
+2025-06-16 11:48:16,982 - WorkflowExecutor - INFO - Added all nodes to workflow
+2025-06-16 11:48:16,983 - WorkflowExecutor - INFO - Added all edges to workflow
+2025-06-16 11:48:16,999 - WorkflowExecutor - INFO - Workflow compiled successfully
+2025-06-16 11:48:16,999 - WorkflowExecutor - INFO - STARTING WORKFLOW EXECUTION
+2025-06-16 11:48:16,999 - WorkflowExecutor - INFO - Initial query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19
+2025-06-16 11:48:16,999 - WorkflowExecutor - INFO - Invoking workflow agent...
+2025-06-16 11:48:17,013 - WorkflowExecutor - INFO - ANALYZING QUERY
+2025-06-16 11:48:17,014 - WorkflowExecutor - INFO - Input query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19
+2025-06-16 11:48:17,014 - WorkflowExecutor - INFO - EXECUTION LOG - query_analysis: Analyzing query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19...
+2025-06-16 11:48:17,014 - WorkflowExecutor - INFO - QUERY ANALYSIS RESULT: Path = complex_task, Reason = Contains complex task keywords
+2025-06-16 11:48:17,014 - WorkflowExecutor - INFO - EXECUTION LOG - path_decision: Selected path: complex_task - Contains complex task keywords
+2025-06-16 11:48:17,015 - WorkflowExecutor - INFO - EXECUTING: task_generation
+2025-06-16 11:48:17,015 - WorkflowExecutor - INFO - EXECUTION LOG - task_generation_start: Starting task generation and planning
+2025-06-16 11:48:17,016 - WorkflowExecutor - INFO - Sending query to LLM for task planning...
+2025-06-16 11:48:17,018 - langchain_aws.llms.bedrock - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 11:48:39,101 - WorkflowExecutor - INFO - Task plan generated successfully. Length: 3879 characters
+2025-06-16 11:48:39,101 - WorkflowExecutor - INFO - EXECUTION LOG - task_generation_complete: Generated plan with 3879 characters
+2025-06-16 11:48:39,101 - WorkflowExecutor - INFO - Plan preview: # Computational Plan for mRNA Vaccine Synthesis Analysis: COVID-19 Case Study |  | ## Overview | This analysis will demonstrate a complete mRNA vaccine synthesis workflow using agents and machine learning for COVID-19, focusing on the SARS-CoV-2 spike protein as the primary target antigen. | 
+2025-06-16 11:48:39,103 - WorkflowExecutor - INFO - EXECUTING: code_generation
+2025-06-16 11:48:39,103 - WorkflowExecutor - INFO - EXECUTION LOG - code_generation_start: Starting code generation
+2025-06-16 11:48:39,104 - WorkflowExecutor - INFO - EXTRACTING TOOL CALLS FROM PLAN
+2025-06-16 11:48:39,104 - WorkflowExecutor - INFO - Sending plan to LLM for tool extraction...
+2025-06-16 11:48:39,106 - langchain_aws.llms.bedrock - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 11:48:41,921 - WorkflowExecutor - INFO - LLM response for tool extraction: ["fetch_and_process_viral_protein_sequence", "predict_epitopes_from_fasta", "design_mrna_constructs_from_epitopes", "optimize_mrna_sequence", "analyze_rna_secondary_structure", "analyze_mrna_immunogenicity_and_safety"]
+2025-06-16 11:48:41,921 - WorkflowExecutor - INFO - Successfully extracted 6 tools: ['fetch_and_process_viral_protein_sequence', 'predict_epitopes_from_fasta', 'design_mrna_constructs_from_epitopes', 'optimize_mrna_sequence', 'analyze_rna_secondary_structure', 'analyze_mrna_immunogenicity_and_safety']
+2025-06-16 11:48:41,921 - WorkflowExecutor - INFO - EXECUTION LOG - tool_extraction: Extracted 6 tools: ['fetch_and_process_viral_protein_sequence', 'predict_epitopes_from_fasta', 'design_mrna_constructs_from_epitopes', 'optimize_mrna_sequence', 'analyze_rna_secondary_structure', 'analyze_mrna_immunogenicity_and_safety']
+2025-06-16 11:48:41,922 - WorkflowExecutor - INFO - Sending tool list to LLM for code generation...
+2025-06-16 11:49:00,358 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 11:49:00,368 - WorkflowExecutor - INFO - Code generated successfully. Length: 4014 characters
+2025-06-16 11:49:00,369 - WorkflowExecutor - INFO - EXECUTION LOG - code_generation_complete: Generated 4014 characters of code
+2025-06-16 11:49:00,369 - WorkflowExecutor - INFO - Code preview: import os | import json | 
+2025-06-16 11:49:00,371 - WorkflowExecutor - INFO - EXECUTING: code_execution
+2025-06-16 11:49:00,371 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_start: Starting code execution
+2025-06-16 11:49:00,371 - WorkflowExecutor - INFO - Executing code with 6 tools
+2025-06-16 11:49:00,371 - WorkflowExecutor - INFO - Created main code file: /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py
+2025-06-16 11:49:00,371 - WorkflowExecutor - INFO - EXECUTION LOG - temp_file_created: Created temporary execution file: None
+2025-06-16 11:49:00,371 - WorkflowExecutor - INFO - Starting subprocess execution...
+2025-06-16 11:49:01,098 - WorkflowExecutor - INFO - Subprocess completed in 0.73 seconds
+2025-06-16 11:49:01,098 - WorkflowExecutor - INFO - Return code: 1
+2025-06-16 11:49:01,098 - WorkflowExecutor - INFO - STDOUT length: 596 characters
+2025-06-16 11:49:01,098 - WorkflowExecutor - INFO - STDERR length: 1932 characters
+2025-06-16 11:49:01,098 - WorkflowExecutor - ERROR - Code execution failed with return code 1
+2025-06-16 11:49:01,098 - WorkflowExecutor - ERROR - STDERR: INFO:step3:Loaded 42 epitopes from epitope_predictions.csv
+INFO:step3:Selected 30 epitopes for construct design
+INFO:step3:Designed 30 single-epitope constructs
+INFO:step3:Designed 3 multi-epitope constructs using mixed strategy
+INFO:step3:Designed 1 multi-epitope constructs using protein_grouped strategy
+INFO:step3:Selected 10 constructs from portfolio optimization
+INFO:step3:Exported 10 constructs to output_mrna.fasta
+INFO:step3:Exported 10 constructs to output_protein.fasta
+INFO:step3:Exported construct details to output_constructs.csv
+INFO:step3:Generated construct report: output_report.txt
+Traceback (most recent call last):
+  File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 119, in <module>
+    run_pipeline()
+  File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 116, in run_pipeline
+    json.dump(results, f, indent=2)
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/home/ubuntu/anaconda3/envs/rebolt_new/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type mRNAConstruct is not JSON serializable
+
+2025-06-16 11:49:01,098 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_failed: Failed with return code 1
+2025-06-16 11:49:01,099 - WorkflowExecutor - INFO - SHOULD_CONTINUE: Current run_test status = debug
+2025-06-16 11:49:01,100 - WorkflowExecutor - INFO - EXECUTION LOG - flow_decision: Flow decision: debug
+2025-06-16 11:49:01,101 - WorkflowExecutor - INFO - EXECUTING: debug_code
+2025-06-16 11:49:01,101 - WorkflowExecutor - INFO - EXECUTION LOG - debug_start: Starting code debugging
+2025-06-16 11:49:01,101 - WorkflowExecutor - INFO - Debugging error: INFO:step3:Loaded 42 epitopes from epitope_predictions.csv
+INFO:step3:Selected 30 epitopes for construct design
+INFO:step3:Designed 30 single-epitope constructs
+INFO:step3:Designed 3 multi-epitope con...
+2025-06-16 11:49:01,102 - WorkflowExecutor - INFO - Sending error info to LLM for debugging...
+2025-06-16 11:49:01,104 - langchain_aws.llms.bedrock - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 11:49:16,068 - WorkflowExecutor - INFO - Debug completed. Fixed code length: 3419 characters
+2025-06-16 11:49:16,069 - WorkflowExecutor - INFO - EXECUTION LOG - debug_complete: Generated fixed code with 3419 characters
+2025-06-16 11:49:16,071 - WorkflowExecutor - INFO - EXECUTING: code_execution
+2025-06-16 11:49:16,071 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_start: Starting code execution
+2025-06-16 11:49:16,071 - WorkflowExecutor - INFO - Executing code with 6 tools
+2025-06-16 11:49:16,071 - WorkflowExecutor - INFO - Created main code file: /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py
+2025-06-16 11:49:16,071 - WorkflowExecutor - INFO - EXECUTION LOG - temp_file_created: Created temporary execution file: None
+2025-06-16 11:49:16,071 - WorkflowExecutor - INFO - Starting subprocess execution...
+2025-06-16 11:49:16,087 - WorkflowExecutor - INFO - Subprocess completed in 0.02 seconds
+2025-06-16 11:49:16,087 - WorkflowExecutor - INFO - Return code: 1
+2025-06-16 11:49:16,087 - WorkflowExecutor - INFO - STDOUT length: 0 characters
+2025-06-16 11:49:16,087 - WorkflowExecutor - INFO - STDERR length: 227 characters
+2025-06-16 11:49:16,087 - WorkflowExecutor - ERROR - Code execution failed with return code 1
+2025-06-16 11:49:16,087 - WorkflowExecutor - ERROR - STDERR:   File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 93
+    results['optimize_mrna_sequence'] = execute_tool(
+                                                    ^
+SyntaxError: '(' was never closed
+
+2025-06-16 11:49:16,087 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_failed: Failed with return code 1
+2025-06-16 11:49:16,088 - WorkflowExecutor - INFO - SHOULD_CONTINUE: Current run_test status = debug
+2025-06-16 11:49:16,088 - WorkflowExecutor - INFO - EXECUTION LOG - flow_decision: Flow decision: debug
+2025-06-16 11:49:16,090 - WorkflowExecutor - INFO - EXECUTING: debug_code
+2025-06-16 11:49:16,090 - WorkflowExecutor - INFO - EXECUTION LOG - debug_start: Starting code debugging
+2025-06-16 11:49:16,091 - WorkflowExecutor - INFO - Debugging error:   File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 93
+    results['optimize_mrna_sequence'] = execute_tool(
+                                                    ^
+SyntaxE...
+2025-06-16 11:49:16,091 - WorkflowExecutor - INFO - Sending error info to LLM for debugging...
+2025-06-16 11:49:16,093 - langchain_aws.llms.bedrock - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 11:49:34,862 - WorkflowExecutor - INFO - Debug completed. Fixed code length: 3424 characters
+2025-06-16 11:49:34,862 - WorkflowExecutor - INFO - EXECUTION LOG - debug_complete: Generated fixed code with 3424 characters
+2025-06-16 11:49:34,863 - WorkflowExecutor - INFO - EXECUTING: code_execution
+2025-06-16 11:49:34,864 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_start: Starting code execution
+2025-06-16 11:49:34,864 - WorkflowExecutor - INFO - Executing code with 6 tools
+2025-06-16 11:49:34,864 - WorkflowExecutor - INFO - Created main code file: /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py
+2025-06-16 11:49:34,864 - WorkflowExecutor - INFO - EXECUTION LOG - temp_file_created: Created temporary execution file: None
+2025-06-16 11:49:34,864 - WorkflowExecutor - INFO - Starting subprocess execution...
+2025-06-16 11:49:34,880 - WorkflowExecutor - INFO - Subprocess completed in 0.02 seconds
+2025-06-16 11:49:34,880 - WorkflowExecutor - INFO - Return code: 1
+2025-06-16 11:49:34,880 - WorkflowExecutor - INFO - STDOUT length: 0 characters
+2025-06-16 11:49:34,880 - WorkflowExecutor - INFO - STDERR length: 227 characters
+2025-06-16 11:49:34,880 - WorkflowExecutor - ERROR - Code execution failed with return code 1
+2025-06-16 11:49:34,880 - WorkflowExecutor - ERROR - STDERR:   File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 93
+    results['optimize_mrna_sequence'] = execute_tool(
+                                                    ^
+SyntaxError: '(' was never closed
+
+2025-06-16 11:49:34,880 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_failed: Failed with return code 1
+2025-06-16 11:49:34,881 - WorkflowExecutor - INFO - SHOULD_CONTINUE: Current run_test status = debug
+2025-06-16 11:49:34,881 - WorkflowExecutor - INFO - EXECUTION LOG - flow_decision: Flow decision: debug
+2025-06-16 11:49:34,883 - WorkflowExecutor - INFO - EXECUTING: debug_code
+2025-06-16 11:49:34,883 - WorkflowExecutor - INFO - EXECUTION LOG - debug_start: Starting code debugging
+2025-06-16 11:49:34,883 - WorkflowExecutor - INFO - Debugging error:   File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 93
+    results['optimize_mrna_sequence'] = execute_tool(
+                                                    ^
+SyntaxE...
+2025-06-16 11:49:34,883 - WorkflowExecutor - INFO - Sending error info to LLM for debugging...
+2025-06-16 11:49:34,885 - langchain_aws.llms.bedrock - INFO - Using Bedrock Invoke API to generate response

@@ -1,0 +1,17 @@
+2025-06-16 11:49:58,536 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 11:49:58,536 - WorkflowExecutor - INFO - WORKFLOW EXECUTION STARTED
+2025-06-16 11:49:58,536 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 11:49:58,536 - WorkflowExecutor - INFO - Loading /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/tool_space.json...
+2025-06-16 11:49:58,536 - WorkflowExecutor - INFO - Successfully loaded 6 tools from tool_space.json
+2025-06-16 11:49:58,537 - WorkflowExecutor - INFO - BUILDING WORKFLOW GRAPH
+2025-06-16 11:49:58,550 - WorkflowExecutor - INFO - Workflow compiled successfully
+2025-06-16 11:49:58,550 - WorkflowExecutor - INFO - STARTING WORKFLOW EXECUTION
+2025-06-16 11:49:58,550 - WorkflowExecutor - INFO - Initial query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19
+2025-06-16 11:49:58,550 - WorkflowExecutor - INFO - Invoking workflow agent...
+2025-06-16 11:49:58,567 - WorkflowExecutor - INFO - ANALYZING QUERY
+2025-06-16 11:49:58,567 - WorkflowExecutor - INFO - EXECUTION LOG - query_analysis: Analyzing query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19...
+2025-06-16 11:49:58,567 - WorkflowExecutor - INFO - QUERY ANALYSIS RESULT: Path = complex_task, Reason = Contains complex task keywords
+2025-06-16 11:49:58,567 - WorkflowExecutor - INFO - EXECUTION LOG - path_decision: Selected path: complex_task - Contains complex task keywords
+2025-06-16 11:49:58,569 - WorkflowExecutor - INFO - EXECUTING: task_generation
+2025-06-16 11:49:58,569 - WorkflowExecutor - INFO - EXECUTION LOG - task_generation_start: Starting task generation and planning
+2025-06-16 11:49:58,572 - langchain_aws.llms.bedrock - INFO - Using Bedrock Invoke API to generate response
