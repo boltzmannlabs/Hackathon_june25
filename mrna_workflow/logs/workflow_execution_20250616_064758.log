@@ -1,0 +1,119 @@
+2025-06-16 06:47:58,350 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 06:47:58,350 - WorkflowExecutor - INFO - WORKFLOW EXECUTION STARTED
+2025-06-16 06:47:58,350 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 06:47:58,350 - WorkflowExecutor - INFO - Loading tool_space.json...
+2025-06-16 06:47:58,350 - WorkflowExecutor - INFO - Successfully loaded 6 tools from tool_space.json
+2025-06-16 06:47:58,351 - WorkflowExecutor - INFO - BUILDING WORKFLOW GRAPH
+2025-06-16 06:47:58,352 - WorkflowExecutor - INFO - Added all nodes to workflow
+2025-06-16 06:47:58,353 - WorkflowExecutor - INFO - Added all edges to workflow
+2025-06-16 06:47:58,368 - WorkflowExecutor - INFO - Workflow compiled successfully
+2025-06-16 06:47:58,368 - WorkflowExecutor - INFO - STARTING WORKFLOW EXECUTION
+2025-06-16 06:47:58,369 - WorkflowExecutor - INFO - Initial query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19
+2025-06-16 06:47:58,369 - WorkflowExecutor - INFO - Invoking workflow agent...
+2025-06-16 06:47:58,383 - WorkflowExecutor - INFO - ANALYZING QUERY
+2025-06-16 06:47:58,383 - WorkflowExecutor - INFO - Input query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19
+2025-06-16 06:47:58,383 - WorkflowExecutor - INFO - EXECUTION LOG - query_analysis: Analyzing query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19...
+2025-06-16 06:47:58,384 - WorkflowExecutor - INFO - QUERY ANALYSIS RESULT: Path = complex_task, Reason = Contains complex task keywords
+2025-06-16 06:47:58,384 - WorkflowExecutor - INFO - EXECUTION LOG - path_decision: Selected path: complex_task - Contains complex task keywords
+2025-06-16 06:47:58,385 - WorkflowExecutor - INFO - EXECUTING: task_generation
+2025-06-16 06:47:58,385 - WorkflowExecutor - INFO - EXECUTION LOG - task_generation_start: Starting task generation and planning
+2025-06-16 06:47:58,691 - WorkflowExecutor - INFO - Sending query to LLM for task planning...
+2025-06-16 06:48:17,916 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 06:48:17,927 - WorkflowExecutor - INFO - Task plan generated successfully. Length: 4382 characters
+2025-06-16 06:48:17,927 - WorkflowExecutor - INFO - EXECUTION LOG - task_generation_complete: Generated plan with 4382 characters
+2025-06-16 06:48:17,928 - WorkflowExecutor - INFO - Plan preview: To analyze mRNA vaccine synthesis using agents and machine learning, specifically in the context of COVID-19, we can follow a structured computational plan. This plan will leverage the provided tools to systematically address each step of the mRNA synthesis workflow. Below is the detailed step-by-step plan: |  | ### Step-by-Step Computational Plan |  | 1. **Define Biological Target**:
+2025-06-16 06:48:17,931 - WorkflowExecutor - INFO - EXECUTING: code_generation
+2025-06-16 06:48:17,931 - WorkflowExecutor - INFO - EXECUTION LOG - code_generation_start: Starting code generation
+2025-06-16 06:48:17,931 - WorkflowExecutor - INFO - EXTRACTING TOOL CALLS FROM PLAN
+2025-06-16 06:48:17,932 - WorkflowExecutor - INFO - Sending plan to LLM for tool extraction...
+2025-06-16 06:48:19,956 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 06:48:19,960 - WorkflowExecutor - INFO - LLM response for tool extraction: ["fetch_and_process_viral_protein_sequence", "predict_epitopes_from_fasta", "design_mrna_constructs_from_epitopes", "optimize_mrna_sequence", "analyze_rna_secondary_structure", "analyze_mrna_immunogenicity_and_safety"]
+2025-06-16 06:48:19,960 - WorkflowExecutor - INFO - Successfully extracted 6 tools: ['fetch_and_process_viral_protein_sequence', 'predict_epitopes_from_fasta', 'design_mrna_constructs_from_epitopes', 'optimize_mrna_sequence', 'analyze_rna_secondary_structure', 'analyze_mrna_immunogenicity_and_safety']
+2025-06-16 06:48:19,960 - WorkflowExecutor - INFO - EXECUTION LOG - tool_extraction: Extracted 6 tools: ['fetch_and_process_viral_protein_sequence', 'predict_epitopes_from_fasta', 'design_mrna_constructs_from_epitopes', 'optimize_mrna_sequence', 'analyze_rna_secondary_structure', 'analyze_mrna_immunogenicity_and_safety']
+2025-06-16 06:48:19,961 - WorkflowExecutor - INFO - Sending tool list to LLM for code generation...
+2025-06-16 06:48:37,472 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 06:48:37,475 - WorkflowExecutor - INFO - Code generated successfully. Length: 5015 characters
+2025-06-16 06:48:37,475 - WorkflowExecutor - INFO - EXECUTION LOG - code_generation_complete: Generated 5015 characters of code
+2025-06-16 06:48:37,475 - WorkflowExecutor - INFO - Code preview: import os | import json | from main_code import (
+2025-06-16 06:48:37,477 - WorkflowExecutor - INFO - EXECUTING: code_execution
+2025-06-16 06:48:37,477 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_start: Starting code execution
+2025-06-16 06:48:37,477 - WorkflowExecutor - INFO - Executing code with 6 tools
+2025-06-16 06:48:37,478 - WorkflowExecutor - INFO - Created main code file: /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py
+2025-06-16 06:48:37,478 - WorkflowExecutor - INFO - EXECUTION LOG - temp_file_created: Created temporary execution file: None
+2025-06-16 06:48:37,478 - WorkflowExecutor - INFO - Starting subprocess execution...
+2025-06-16 06:48:38,188 - WorkflowExecutor - INFO - Subprocess completed in 0.71 seconds
+2025-06-16 06:48:38,189 - WorkflowExecutor - INFO - Return code: 1
+2025-06-16 06:48:38,189 - WorkflowExecutor - INFO - STDOUT length: 0 characters
+2025-06-16 06:48:38,189 - WorkflowExecutor - INFO - STDERR length: 516 characters
+2025-06-16 06:48:38,189 - WorkflowExecutor - ERROR - Code execution failed with return code 1
+2025-06-16 06:48:38,189 - WorkflowExecutor - ERROR - STDERR: Traceback (most recent call last):
+  File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 14, in <module>
+    from main_code import (
+  File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 14, in <module>
+    from main_code import (
+ImportError: cannot import name 'fetch_and_process_viral_protein_sequence' from partially initialized module 'main_code' (most likely due to a circular import) (/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py)
+
+2025-06-16 06:48:38,189 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_failed: Failed with return code 1
+2025-06-16 06:48:38,190 - WorkflowExecutor - INFO - SHOULD_CONTINUE: Current run_test status = debug
+2025-06-16 06:48:38,190 - WorkflowExecutor - INFO - EXECUTION LOG - flow_decision: Flow decision: debug
+2025-06-16 06:48:38,192 - WorkflowExecutor - INFO - EXECUTING: debug_code
+2025-06-16 06:48:38,192 - WorkflowExecutor - INFO - EXECUTION LOG - debug_start: Starting code debugging
+2025-06-16 06:48:38,192 - WorkflowExecutor - INFO - Debugging error: Traceback (most recent call last):
+  File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 14, in <module>
+    from main_code import (
+  File "/home/ubuntu/prasanna/internal_...
+2025-06-16 06:48:38,192 - WorkflowExecutor - INFO - Sending error info to LLM for debugging...
+2025-06-16 06:49:00,314 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 06:49:00,323 - WorkflowExecutor - INFO - Debug completed. Fixed code length: 6485 characters
+2025-06-16 06:49:00,323 - WorkflowExecutor - INFO - EXECUTION LOG - debug_complete: Generated fixed code with 6485 characters
+2025-06-16 06:49:00,325 - WorkflowExecutor - INFO - EXECUTING: code_execution
+2025-06-16 06:49:00,325 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_start: Starting code execution
+2025-06-16 06:49:00,325 - WorkflowExecutor - INFO - Executing code with 6 tools
+2025-06-16 06:49:00,325 - WorkflowExecutor - INFO - Created main code file: /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py
+2025-06-16 06:49:00,326 - WorkflowExecutor - INFO - EXECUTION LOG - temp_file_created: Created temporary execution file: None
+2025-06-16 06:49:00,329 - WorkflowExecutor - INFO - Starting subprocess execution...
+2025-06-16 06:49:00,345 - WorkflowExecutor - INFO - Subprocess completed in 0.02 seconds
+2025-06-16 06:49:00,345 - WorkflowExecutor - INFO - Return code: 1
+2025-06-16 06:49:00,345 - WorkflowExecutor - INFO - STDOUT length: 0 characters
+2025-06-16 06:49:00,345 - WorkflowExecutor - INFO - STDERR length: 421 characters
+2025-06-16 06:49:00,345 - WorkflowExecutor - ERROR - Code execution failed with return code 1
+2025-06-16 06:49:00,345 - WorkflowExecutor - ERROR - STDERR:   File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 12
+    The error you're encountering is an `ImportError` due to a circular import. This typically happens when a module tries to import itself directly or indirectly, leading to a situation where Python cannot fully initialize the module before it is used.
+                 ^
+SyntaxError: unterminated string literal (detected at line 12)
+
+2025-06-16 06:49:00,345 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_failed: Failed with return code 1
+2025-06-16 06:49:00,346 - WorkflowExecutor - INFO - SHOULD_CONTINUE: Current run_test status = debug
+2025-06-16 06:49:00,347 - WorkflowExecutor - INFO - EXECUTION LOG - flow_decision: Flow decision: debug
+2025-06-16 06:49:00,349 - WorkflowExecutor - INFO - EXECUTING: debug_code
+2025-06-16 06:49:00,350 - WorkflowExecutor - INFO - EXECUTION LOG - debug_start: Starting code debugging
+2025-06-16 06:49:00,350 - WorkflowExecutor - INFO - Debugging error:   File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 12
+    The error you're encountering is an `ImportError` due to a circular import. This typically happens when a modul...
+2025-06-16 06:49:00,351 - WorkflowExecutor - INFO - Sending error info to LLM for debugging...
+2025-06-16 06:49:27,633 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 06:49:27,639 - WorkflowExecutor - INFO - Debug completed. Fixed code length: 6139 characters
+2025-06-16 06:49:27,639 - WorkflowExecutor - INFO - EXECUTION LOG - debug_complete: Generated fixed code with 6139 characters
+2025-06-16 06:49:27,641 - WorkflowExecutor - INFO - EXECUTING: code_execution
+2025-06-16 06:49:27,641 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_start: Starting code execution
+2025-06-16 06:49:27,641 - WorkflowExecutor - INFO - Executing code with 6 tools
+2025-06-16 06:49:27,642 - WorkflowExecutor - INFO - Created main code file: /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py
+2025-06-16 06:49:27,642 - WorkflowExecutor - INFO - EXECUTION LOG - temp_file_created: Created temporary execution file: None
+2025-06-16 06:49:27,642 - WorkflowExecutor - INFO - Starting subprocess execution...
+2025-06-16 06:49:27,658 - WorkflowExecutor - INFO - Subprocess completed in 0.02 seconds
+2025-06-16 06:49:27,658 - WorkflowExecutor - INFO - Return code: 1
+2025-06-16 06:49:27,658 - WorkflowExecutor - INFO - STDOUT length: 0 characters
+2025-06-16 06:49:27,658 - WorkflowExecutor - INFO - STDERR length: 344 characters
+2025-06-16 06:49:27,658 - WorkflowExecutor - ERROR - Code execution failed with return code 1
+2025-06-16 06:49:27,658 - WorkflowExecutor - ERROR - STDERR:   File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 12
+    The error message you provided indicates a `SyntaxError` due to an "unterminated string literal." This typically means that there is a string in your code that has not been properly closed with a matching quote. 
+        ^^^^^
+SyntaxError: invalid syntax
+
+2025-06-16 06:49:27,659 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_failed: Failed with return code 1
+2025-06-16 06:49:27,660 - WorkflowExecutor - INFO - SHOULD_CONTINUE: Current run_test status = debug
+2025-06-16 06:49:27,660 - WorkflowExecutor - INFO - EXECUTION LOG - flow_decision: Flow decision: debug
+2025-06-16 06:49:27,662 - WorkflowExecutor - INFO - EXECUTING: debug_code
+2025-06-16 06:49:27,662 - WorkflowExecutor - INFO - EXECUTION LOG - debug_start: Starting code debugging
+2025-06-16 06:49:27,662 - WorkflowExecutor - INFO - Debugging error:   File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 12
+    The error message you provided indicates a `SyntaxError` due to an "unterminated string literal." This typicall...
+2025-06-16 06:49:27,663 - WorkflowExecutor - INFO - Sending error info to LLM for debugging...

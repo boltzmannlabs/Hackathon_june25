@@ -1,0 +1,59 @@
+2025-06-16 09:49:54,654 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 09:49:54,654 - WorkflowExecutor - INFO - WORKFLOW EXECUTION STARTED
+2025-06-16 09:49:54,654 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 09:49:54,654 - WorkflowExecutor - INFO - Loading /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/tool_space.json...
+2025-06-16 09:49:54,655 - WorkflowExecutor - INFO - Successfully loaded 6 tools from tool_space.json
+2025-06-16 09:49:54,655 - WorkflowExecutor - INFO - BUILDING WORKFLOW GRAPH
+2025-06-16 09:49:54,670 - WorkflowExecutor - INFO - Workflow compiled successfully
+2025-06-16 09:49:54,671 - WorkflowExecutor - INFO - STARTING WORKFLOW EXECUTION
+2025-06-16 09:49:54,671 - WorkflowExecutor - INFO - Initial query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19
+2025-06-16 09:49:54,671 - WorkflowExecutor - INFO - Invoking workflow agent...
+2025-06-16 09:49:54,686 - WorkflowExecutor - INFO - ANALYZING QUERY
+2025-06-16 09:49:54,687 - WorkflowExecutor - INFO - EXECUTION LOG - query_analysis: Analyzing query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19...
+2025-06-16 09:49:54,687 - WorkflowExecutor - INFO - QUERY ANALYSIS RESULT: Path = complex_task, Reason = Contains complex task keywords
+2025-06-16 09:49:54,687 - WorkflowExecutor - INFO - EXECUTION LOG - path_decision: Selected path: complex_task - Contains complex task keywords
+2025-06-16 09:49:54,688 - WorkflowExecutor - INFO - EXECUTING: task_generation
+2025-06-16 09:49:54,689 - WorkflowExecutor - INFO - EXECUTION LOG - task_generation_start: Starting task generation and planning
+2025-06-16 09:49:54,692 - langchain_aws.llms.bedrock - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 09:50:16,587 - WorkflowExecutor - INFO - EXECUTION LOG - task_generation_complete: Generated plan
+2025-06-16 09:50:16,591 - WorkflowExecutor - INFO - EXECUTING: code_generation
+2025-06-16 09:50:16,591 - WorkflowExecutor - INFO - EXECUTION LOG - code_generation_start: Starting code generation
+2025-06-16 09:50:16,591 - WorkflowExecutor - INFO - EXTRACTING TOOL CALLS FROM PLAN
+2025-06-16 09:50:16,594 - langchain_aws.llms.bedrock - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 09:50:19,181 - WorkflowExecutor - INFO - Successfully extracted 6 tools: ['fetch_and_process_viral_protein_sequence', 'predict_epitopes_from_fasta', 'design_mrna_constructs_from_epitopes', 'optimize_mrna_sequence', 'analyze_rna_secondary_structure', 'analyze_mrna_immunogenicity_and_safety']
+2025-06-16 09:50:19,181 - WorkflowExecutor - INFO - EXECUTION LOG - tool_extraction: Extracted 6 tools: ['fetch_and_process_viral_protein_sequence', 'predict_epitopes_from_fasta', 'design_mrna_constructs_from_epitopes', 'optimize_mrna_sequence', 'analyze_rna_secondary_structure', 'analyze_mrna_immunogenicity_and_safety']
+2025-06-16 09:50:33,368 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-16 09:50:33,379 - WorkflowExecutor - INFO - EXECUTION LOG - code_generation_complete: Generated code
+2025-06-16 09:50:33,381 - WorkflowExecutor - INFO - EXECUTING: code_execution
+2025-06-16 09:50:33,381 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_start: Starting code execution
+2025-06-16 09:50:33,381 - WorkflowExecutor - INFO - Executing code with 6 tools
+2025-06-16 09:50:33,382 - WorkflowExecutor - INFO - Created main code file: /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py
+2025-06-16 09:50:33,382 - WorkflowExecutor - INFO - EXECUTION LOG - main_codefile_created: Created main_code.py for execution
+2025-06-16 09:50:34,165 - WorkflowExecutor - ERROR - Code execution failed with return code 1
+2025-06-16 09:50:34,165 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_failed: Failed with return code 1
+2025-06-16 09:50:34,167 - WorkflowExecutor - INFO - SHOULD_CONTINUE: Current run_test status = debug
+2025-06-16 09:50:34,167 - WorkflowExecutor - INFO - EXECUTION LOG - flow_decision: Flow decision: debug
+2025-06-16 09:50:34,168 - WorkflowExecutor - INFO - EXECUTING: debug_code
+2025-06-16 09:50:34,169 - WorkflowExecutor - INFO - EXECUTION LOG - debug_start: Starting code debugging
+2025-06-16 09:50:34,169 - WorkflowExecutor - INFO - Debugging error: INFO:step3:Loaded 42 epitopes from epitope_predictions.csv
+INFO:step3:Selected 30 epitopes for construct design
+INFO:step3:Designed 30 single-epitope constructs
+INFO:step3:Designed 3 multi-epitope con...
+2025-06-16 09:50:34,171 - langchain_aws.llms.bedrock - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 09:50:48,706 - WorkflowExecutor - INFO - EXECUTION LOG - debug_complete: Generated fixed code
+2025-06-16 09:50:48,708 - WorkflowExecutor - INFO - EXECUTING: code_execution
+2025-06-16 09:50:48,708 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_start: Starting code execution
+2025-06-16 09:50:48,708 - WorkflowExecutor - INFO - Executing code with 6 tools
+2025-06-16 09:50:48,708 - WorkflowExecutor - INFO - Created main code file: /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py
+2025-06-16 09:50:48,709 - WorkflowExecutor - INFO - EXECUTION LOG - main_codefile_created: Created main_code.py for execution
+2025-06-16 09:50:48,726 - WorkflowExecutor - ERROR - Code execution failed with return code 1
+2025-06-16 09:50:48,726 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_failed: Failed with return code 1
+2025-06-16 09:50:48,727 - WorkflowExecutor - INFO - SHOULD_CONTINUE: Current run_test status = debug
+2025-06-16 09:50:48,728 - WorkflowExecutor - INFO - EXECUTION LOG - flow_decision: Flow decision: debug
+2025-06-16 09:50:48,730 - WorkflowExecutor - INFO - EXECUTING: debug_code
+2025-06-16 09:50:48,730 - WorkflowExecutor - INFO - EXECUTION LOG - debug_start: Starting code debugging
+2025-06-16 09:50:48,730 - WorkflowExecutor - INFO - Debugging error:   File "/home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py", line 104
+    results['optimize_mrna_sequence'] = execute_tool(
+                                                    ^
+Syntax...
+2025-06-16 09:50:48,733 - langchain_aws.llms.bedrock - INFO - Using Bedrock Invoke API to generate response

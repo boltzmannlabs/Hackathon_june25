@@ -1,0 +1,24 @@
+2025-06-16 10:44:38,592 - INFO - ============================================================
+2025-06-16 10:44:38,592 - INFO - WORKFLOW EXECUTION STARTED
+2025-06-16 10:44:38,592 - INFO - ============================================================
+2025-06-16 10:44:38,592 - INFO - Loading /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/tool_space.json...
+2025-06-16 10:44:38,592 - INFO - Loaded 6 tools from tool_space.json
+2025-06-16 10:44:38,607 - INFO - Workflow compiled successfully
+2025-06-16 10:44:38,629 - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 10:44:59,146 - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 10:45:01,799 - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 10:47:01,640 - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 10:50:57,167 - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 10:51:49,948 - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 10:52:43,268 - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 10:54:33,812 - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 10:57:27,293 - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 10:58:22,966 - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 10:59:17,996 - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 11:00:08,207 - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 11:00:58,072 - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 11:01:57,002 - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 11:02:53,543 - ERROR - WORKFLOW EXECUTION FAILED: Recursion limit of 25 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT
+2025-06-16 11:02:53,543 - ERROR - Please ensure you have the required dependencies installed:
+2025-06-16 11:02:53,543 - ERROR - pip install langgraph langchain-openai python-dotenv

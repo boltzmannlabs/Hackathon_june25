@@ -1,0 +1,43 @@
+2025-06-16 09:55:43,394 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 09:55:43,394 - WorkflowExecutor - INFO - WORKFLOW EXECUTION STARTED
+2025-06-16 09:55:43,394 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 09:55:43,395 - WorkflowExecutor - INFO - Loading /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/tool_space.json...
+2025-06-16 09:55:43,395 - WorkflowExecutor - INFO - Successfully loaded 6 tools from tool_space.json
+2025-06-16 09:55:43,395 - WorkflowExecutor - INFO - BUILDING WORKFLOW GRAPH
+2025-06-16 09:55:43,409 - WorkflowExecutor - INFO - Workflow compiled successfully
+2025-06-16 09:55:43,409 - WorkflowExecutor - INFO - STARTING WORKFLOW EXECUTION
+2025-06-16 09:55:43,410 - WorkflowExecutor - INFO - Initial query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19
+2025-06-16 09:55:43,410 - WorkflowExecutor - INFO - Invoking workflow agent...
+2025-06-16 09:55:43,424 - WorkflowExecutor - INFO - ANALYZING QUERY
+2025-06-16 09:55:43,425 - WorkflowExecutor - INFO - EXECUTION LOG - query_analysis: Analyzing query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19...
+2025-06-16 09:55:43,425 - WorkflowExecutor - INFO - QUERY ANALYSIS RESULT: Path = complex_task, Reason = Contains complex task keywords
+2025-06-16 09:55:43,425 - WorkflowExecutor - INFO - EXECUTION LOG - path_decision: Selected path: complex_task - Contains complex task keywords
+2025-06-16 09:55:43,426 - WorkflowExecutor - INFO - EXECUTING: task_generation
+2025-06-16 09:55:43,426 - WorkflowExecutor - INFO - EXECUTION LOG - task_generation_start: Starting task generation and planning
+2025-06-16 09:55:43,429 - langchain_aws.llms.bedrock - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 09:56:03,911 - WorkflowExecutor - INFO - EXECUTION LOG - task_generation_complete: Generated plan
+2025-06-16 09:56:03,914 - WorkflowExecutor - INFO - EXECUTING: code_generation
+2025-06-16 09:56:03,914 - WorkflowExecutor - INFO - EXECUTION LOG - code_generation_start: Starting code generation
+2025-06-16 09:56:03,914 - WorkflowExecutor - INFO - EXTRACTING TOOL CALLS FROM PLAN
+2025-06-16 09:56:03,917 - langchain_aws.llms.bedrock - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 09:56:06,361 - WorkflowExecutor - INFO - Successfully extracted 6 tools: ['fetch_and_process_viral_protein_sequence', 'predict_epitopes_from_fasta', 'design_mrna_constructs_from_epitopes', 'optimize_mrna_sequence', 'analyze_rna_secondary_structure', 'analyze_mrna_immunogenicity_and_safety']
+2025-06-16 09:56:06,362 - WorkflowExecutor - INFO - EXECUTION LOG - tool_extraction: Extracted 6 tools: ['fetch_and_process_viral_protein_sequence', 'predict_epitopes_from_fasta', 'design_mrna_constructs_from_epitopes', 'optimize_mrna_sequence', 'analyze_rna_secondary_structure', 'analyze_mrna_immunogenicity_and_safety']
+2025-06-16 09:56:06,364 - langchain_aws.llms.bedrock - INFO - Using Bedrock Invoke API to generate response
+2025-06-16 09:56:52,806 - WorkflowExecutor - INFO - EXECUTION LOG - code_generation_complete: Generated code
+2025-06-16 09:56:52,808 - WorkflowExecutor - INFO - EXECUTING: code_execution
+2025-06-16 09:56:52,808 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_start: Starting code execution
+2025-06-16 09:56:52,808 - WorkflowExecutor - INFO - Executing code with 6 tools
+2025-06-16 09:56:52,808 - WorkflowExecutor - INFO - Created main code file: /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/main_code.py
+2025-06-16 09:56:52,808 - WorkflowExecutor - INFO - EXECUTION LOG - main_codefile_created: Created main_code.py for execution
+2025-06-16 09:56:53,577 - WorkflowExecutor - INFO - Code execution completed successfully
+2025-06-16 09:56:53,578 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_success: Executed successfully
+2025-06-16 09:56:53,579 - WorkflowExecutor - INFO - SHOULD_CONTINUE: Current run_test status = end
+2025-06-16 09:56:53,579 - WorkflowExecutor - INFO - EXECUTION LOG - flow_decision: Flow decision: end
+2025-06-16 09:56:53,582 - WorkflowExecutor - INFO - EXECUTING: result_analysis
+2025-06-16 09:56:53,582 - WorkflowExecutor - INFO - EXECUTION LOG - result_analysis_start: Starting result analysis and report generation
+2025-06-16 09:56:53,582 - WorkflowExecutor - INFO - Result analysis completed successfully
+2025-06-16 09:56:53,582 - WorkflowExecutor - INFO - EXECUTION LOG - result_analysis_complete: Generated final report
+2025-06-16 09:56:53,583 - WorkflowExecutor - INFO - WORKFLOW EXECUTION COMPLETED SUCCESSFULLY
+2025-06-16 09:56:53,584 - WorkflowExecutor - INFO - Report saved to: /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/logs/workflow_report_20250616_095653.txt
+2025-06-16 09:56:53,584 - WorkflowExecutor - INFO - WORKFLOW EXECUTION FINISHED
+2025-06-16 09:56:53,584 - WorkflowExecutor - INFO - ============================================================

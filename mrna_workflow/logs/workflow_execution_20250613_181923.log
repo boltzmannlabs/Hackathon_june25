@@ -1,0 +1,65 @@
+2025-06-13 18:19:23,801 - WorkflowExecutor - INFO - ============================================================
+2025-06-13 18:19:23,801 - WorkflowExecutor - INFO - WORKFLOW EXECUTION STARTED
+2025-06-13 18:19:23,802 - WorkflowExecutor - INFO - ============================================================
+2025-06-13 18:19:23,802 - WorkflowExecutor - INFO - Loading tool_space.json...
+2025-06-13 18:19:23,802 - WorkflowExecutor - INFO - Successfully loaded 6 tools from tool_space.json
+2025-06-13 18:19:23,802 - WorkflowExecutor - INFO - BUILDING WORKFLOW GRAPH
+2025-06-13 18:19:23,803 - WorkflowExecutor - INFO - Added all nodes to workflow
+2025-06-13 18:19:23,804 - WorkflowExecutor - INFO - Added all edges to workflow
+2025-06-13 18:19:23,818 - WorkflowExecutor - INFO - Workflow compiled successfully
+2025-06-13 18:19:23,818 - WorkflowExecutor - INFO - STARTING WORKFLOW EXECUTION
+2025-06-13 18:19:23,818 - WorkflowExecutor - INFO - Initial query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19
+2025-06-13 18:19:23,818 - WorkflowExecutor - INFO - Invoking workflow agent...
+2025-06-13 18:19:23,831 - WorkflowExecutor - INFO - ANALYZING QUERY
+2025-06-13 18:19:23,832 - WorkflowExecutor - INFO - Input query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19
+2025-06-13 18:19:23,832 - WorkflowExecutor - INFO - EXECUTION LOG - query_analysis: Analyzing query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19...
+2025-06-13 18:19:23,832 - WorkflowExecutor - INFO - QUERY ANALYSIS RESULT: Path = complex_task, Reason = Contains complex task keywords
+2025-06-13 18:19:23,832 - WorkflowExecutor - INFO - EXECUTION LOG - path_decision: Selected path: complex_task - Contains complex task keywords
+2025-06-13 18:19:23,833 - WorkflowExecutor - INFO - EXECUTING: task_generation
+2025-06-13 18:19:23,833 - WorkflowExecutor - INFO - EXECUTION LOG - task_generation_start: Starting task generation and planning
+2025-06-13 18:19:24,129 - WorkflowExecutor - INFO - Sending query to LLM for task planning...
+2025-06-13 18:19:43,866 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 18:19:43,875 - WorkflowExecutor - INFO - Task plan generated successfully. Length: 5213 characters
+2025-06-13 18:19:43,876 - WorkflowExecutor - INFO - EXECUTION LOG - task_generation_complete: Generated plan with 5213 characters
+2025-06-13 18:19:43,876 - WorkflowExecutor - INFO - Plan preview: To analyze mRNA vaccine synthesis using agents and machine learning, particularly in the context of COVID-19, we can break down the process into a series of computational steps. Each step will utilize specific tools from the provided list to achieve the desired outcomes. Below is a detailed plan outlining these steps. |  | ### Step-by-Step Computational Plan |  | 1. **Fetch Viral Protein Sequence**
+2025-06-13 18:19:43,878 - WorkflowExecutor - INFO - EXECUTING: code_generation
+2025-06-13 18:19:43,878 - WorkflowExecutor - INFO - EXECUTION LOG - code_generation_start: Starting code generation
+2025-06-13 18:19:43,878 - WorkflowExecutor - INFO - EXTRACTING TOOL CALLS FROM PLAN
+2025-06-13 18:19:43,878 - WorkflowExecutor - INFO - Sending plan to LLM for tool extraction...
+2025-06-13 18:19:45,487 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 18:19:45,492 - WorkflowExecutor - INFO - LLM response for tool extraction: ["fetch_and_process_viral_protein_sequence", "predict_epitopes_from_fasta", "design_mrna_constructs_from_epitopes", "optimize_mrna_sequence", "analyze_rna_secondary_structure", "analyze_mrna_immunogenicity_and_safety"]
+2025-06-13 18:19:45,492 - WorkflowExecutor - INFO - Successfully extracted 6 tools: ['fetch_and_process_viral_protein_sequence', 'predict_epitopes_from_fasta', 'design_mrna_constructs_from_epitopes', 'optimize_mrna_sequence', 'analyze_rna_secondary_structure', 'analyze_mrna_immunogenicity_and_safety']
+2025-06-13 18:19:45,493 - WorkflowExecutor - INFO - EXECUTION LOG - tool_extraction: Extracted 6 tools: ['fetch_and_process_viral_protein_sequence', 'predict_epitopes_from_fasta', 'design_mrna_constructs_from_epitopes', 'optimize_mrna_sequence', 'analyze_rna_secondary_structure', 'analyze_mrna_immunogenicity_and_safety']
+2025-06-13 18:19:45,493 - WorkflowExecutor - INFO - Sending tool list to LLM for code generation...
+2025-06-13 18:19:51,434 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-13 18:19:51,437 - WorkflowExecutor - INFO - Code generated successfully. Length: 1733 characters
+2025-06-13 18:19:51,438 - WorkflowExecutor - INFO - EXECUTION LOG - code_generation_complete: Generated 1733 characters of code
+2025-06-13 18:19:51,438 - WorkflowExecutor - INFO - Code preview: import importlib |  | tool_list = [
+2025-06-13 18:19:51,439 - WorkflowExecutor - INFO - EXECUTING: code_execution
+2025-06-13 18:19:51,439 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_start: Starting code execution
+2025-06-13 18:19:51,439 - WorkflowExecutor - INFO - Executing code with 6 tools
+2025-06-13 18:19:51,440 - WorkflowExecutor - INFO - Created temporary file: /tmp/tmp38i8no1q.py
+2025-06-13 18:19:51,440 - WorkflowExecutor - INFO - EXECUTION LOG - temp_file_created: Created temporary execution file: /tmp/tmp38i8no1q.py
+2025-06-13 18:19:51,440 - WorkflowExecutor - INFO - Starting subprocess execution...
+2025-06-13 18:19:51,465 - WorkflowExecutor - INFO - Subprocess completed in 0.03 seconds
+2025-06-13 18:19:51,465 - WorkflowExecutor - INFO - Return code: 0
+2025-06-13 18:19:51,465 - WorkflowExecutor - INFO - STDOUT length: 458 characters
+2025-06-13 18:19:51,465 - WorkflowExecutor - INFO - STDERR length: 0 characters
+2025-06-13 18:19:51,466 - WorkflowExecutor - INFO - Code execution completed successfully
+2025-06-13 18:19:51,466 - WorkflowExecutor - INFO - EXECUTION LOG - code_execution_success: Executed in 0.03s
+2025-06-13 18:19:51,466 - WorkflowExecutor - INFO - Cleaned up temporary file: /tmp/tmp38i8no1q.py
+2025-06-13 18:19:51,466 - WorkflowExecutor - INFO - EXECUTION LOG - temp_file_cleanup: Removed temporary file: /tmp/tmp38i8no1q.py
+2025-06-13 18:19:51,467 - WorkflowExecutor - INFO - SHOULD_CONTINUE: Current run_test status = end
+2025-06-13 18:19:51,467 - WorkflowExecutor - INFO - EXECUTION LOG - flow_decision: Flow decision: end
+2025-06-13 18:19:51,469 - WorkflowExecutor - INFO - EXECUTING: result_analysis
+2025-06-13 18:19:51,469 - WorkflowExecutor - INFO - EXECUTION LOG - result_analysis_start: Starting result analysis and report generation
+2025-06-13 18:19:51,469 - WorkflowExecutor - INFO - Result analysis completed successfully
+2025-06-13 18:19:51,469 - WorkflowExecutor - INFO - Final report length: 9832 characters
+2025-06-13 18:19:51,469 - WorkflowExecutor - INFO - EXECUTION LOG - result_analysis_complete: Generated final report with 9832 characters
+2025-06-13 18:19:51,470 - WorkflowExecutor - INFO - WORKFLOW EXECUTION COMPLETED SUCCESSFULLY
+2025-06-13 18:19:51,470 - WorkflowExecutor - INFO - ============================================================
+2025-06-13 18:19:51,470 - WorkflowExecutor - INFO - FINAL REPORT:
+2025-06-13 18:19:51,470 - WorkflowExecutor - INFO - ============================================================
+2025-06-13 18:19:51,471 - WorkflowExecutor - INFO - Report saved to: logs/workflow_report_20250613_181951.txt
+2025-06-13 18:19:51,471 - WorkflowExecutor - INFO - WORKFLOW EXECUTION FINISHED
+2025-06-13 18:19:51,471 - WorkflowExecutor - INFO - ============================================================

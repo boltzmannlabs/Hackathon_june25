@@ -1,0 +1,42 @@
+2025-06-16 10:12:07,908 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 10:12:07,910 - WorkflowExecutor - INFO - WORKFLOW EXECUTION STARTED
+2025-06-16 10:12:07,911 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 10:12:07,913 - WorkflowExecutor - INFO - Loading /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/tool_space.json...
+2025-06-16 10:12:07,915 - WorkflowExecutor - INFO - Successfully loaded 6 tools from tool_space.json
+2025-06-16 10:12:07,921 - WorkflowExecutor - INFO - BUILDING WORKFLOW GRAPH
+2025-06-16 10:12:07,947 - WorkflowExecutor - INFO - Workflow compiled successfully
+2025-06-16 10:14:01,270 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 10:14:01,272 - WorkflowExecutor - INFO - WORKFLOW EXECUTION STARTED
+2025-06-16 10:14:01,282 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 10:14:01,286 - WorkflowExecutor - INFO - Loading /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/tool_space.json...
+2025-06-16 10:14:01,292 - WorkflowExecutor - INFO - Successfully loaded 6 tools from tool_space.json
+2025-06-16 10:14:01,307 - WorkflowExecutor - INFO - BUILDING WORKFLOW GRAPH
+2025-06-16 10:14:01,318 - WorkflowExecutor - ERROR - Error compiling workflow: Graph must have an entrypoint: add at least one edge from START to another node
+2025-06-16 10:14:13,972 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 10:14:13,973 - WorkflowExecutor - INFO - WORKFLOW EXECUTION STARTED
+2025-06-16 10:14:13,975 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 10:14:13,976 - WorkflowExecutor - INFO - Loading /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/tool_space.json...
+2025-06-16 10:14:13,978 - WorkflowExecutor - INFO - Successfully loaded 6 tools from tool_space.json
+2025-06-16 10:14:13,981 - WorkflowExecutor - INFO - BUILDING WORKFLOW GRAPH
+2025-06-16 10:14:13,996 - WorkflowExecutor - INFO - Workflow compiled successfully
+2025-06-16 10:15:42,341 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 10:15:42,344 - WorkflowExecutor - INFO - WORKFLOW EXECUTION STARTED
+2025-06-16 10:15:42,346 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 10:15:42,349 - WorkflowExecutor - INFO - Loading /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/tool_space.json...
+2025-06-16 10:15:42,358 - WorkflowExecutor - INFO - Successfully loaded 6 tools from tool_space.json
+2025-06-16 10:15:42,381 - WorkflowExecutor - INFO - BUILDING WORKFLOW GRAPH
+2025-06-16 10:15:42,397 - WorkflowExecutor - INFO - Workflow compiled successfully
+2025-06-16 10:16:53,866 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 10:16:53,867 - WorkflowExecutor - INFO - WORKFLOW EXECUTION STARTED
+2025-06-16 10:16:53,869 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 10:16:53,870 - WorkflowExecutor - INFO - Loading /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/tool_space.json...
+2025-06-16 10:16:53,871 - WorkflowExecutor - INFO - Successfully loaded 6 tools from tool_space.json
+2025-06-16 10:16:53,877 - WorkflowExecutor - INFO - BUILDING WORKFLOW GRAPH
+2025-06-16 10:16:53,894 - WorkflowExecutor - INFO - Workflow compiled successfully
+2025-06-16 10:28:24,511 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 10:28:24,513 - WorkflowExecutor - INFO - WORKFLOW EXECUTION STARTED
+2025-06-16 10:28:24,514 - WorkflowExecutor - INFO - ============================================================
+2025-06-16 10:28:24,515 - WorkflowExecutor - INFO - Loading /home/ubuntu/prasanna/internal_hackathon/mrns_2_agent/tool_space.json...
+2025-06-16 10:28:24,517 - WorkflowExecutor - INFO - Successfully loaded 6 tools from tool_space.json
+2025-06-16 10:28:24,523 - WorkflowExecutor - INFO - BUILDING WORKFLOW GRAPH
+2025-06-16 10:28:24,544 - WorkflowExecutor - INFO - Workflow compiled successfully

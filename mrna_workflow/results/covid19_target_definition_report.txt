@@ -1,0 +1,10 @@
+
+COVID-19 mRNA Vaccine Target Definition Report
+============================================
+
+Target: SARS-CoV-2 Spike Protein
+Source: NCBI
+Domains Extracted: RBD (Receptor Binding Domain)
+Description: COVID-19_spike_protein_target
+
+Process completed successfully. Target sequence has been defined and saved.

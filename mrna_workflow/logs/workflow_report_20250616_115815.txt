@@ -1,0 +1,313 @@
+============================================================
+WORKFLOW EXECUTION REPORT
+============================================================
+Query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19
+Path taken: complex_task
+Execution timestamp: 2025-06-16T11:58:15.796471
+------------------------------------------------------------
+PLAN:
+# Computational Plan for mRNA Vaccine Synthesis Analysis: COVID-19 Case Study
+
+## Overview
+This analysis will demonstrate a complete mRNA vaccine synthesis workflow using agents and machine learning for COVID-19, focusing on the SARS-CoV-2 spike protein as the primary target antigen.
+
+## Step-by-Step Computational Plan
+
+### Step 1: Define Biological Target
+**Objective**: Retrieve and process the SARS-CoV-2 spike protein sequence
+- **Tool**: `fetch_and_process_viral_protein_sequence`
+- **Rationale**: The spike protein is the primary target for COVID-19 vaccines due to its role in viral entry and high immunogenicity
+- **Focus**: Extract the Receptor Binding Domain (RBD) which contains critical epitopes for neutralizing antibodies
+
+### Step 2: Predict and Filter Epitopes
+**Objective**: Identify immunogenic B-cell and T-cell epitopes from the spike protein
+- **Tool**: `predict_epitopes_from_fasta`
+- **Machine Learning Component**: Uses trained models for epitope prediction across multiple HLA alleles
+- **HLA Coverage**: Include common alleles (HLA-A*02:01, HLA-A*01:01, HLA-B*07:02, HLA-DRB1*15:01) for broad population coverage
+
+### Step 3: Design mRNA Construct
+**Objective**: Create optimized mRNA vaccine constructs from predicted epitopes
+- **Tool**: `design_mrna_constructs_from_epitopes`
+- **Agent-Based Approach**: Intelligent selection and combination of epitopes based on scoring algorithms
+- **Strategy**: Generate multiple construct types (single-epitope, mixed-strategy, protein-grouped) for comparison
+
+### Step 4: Optimize Codon Usage
+**Objective**: Enhance protein expression through species-specific codon optimization
+- **Tool**: `optimize_mrna_sequence`
+- **Optimization Target**: Human codon usage for maximum expression efficiency
+- **Metrics**: Calculate GC content and Codon Adaptation Index (CAI)
+
+### Step 5: Predict Secondary Structure and Stability
+**Objective**: Analyze RNA folding patterns and structural stability
+- **Tool**: `analyze_rna_secondary_structure`
+- **Computational Method**: RNAfold algorithm for minimum free energy prediction
+- **Focus Areas**: 5' UTR hairpin analysis and overall structural favorability for translation
+
+### Step 6: Evaluate Immunogenicity and Safety
+**Objective**: Assess safety profile and immune response potential
+- **Tool**: `analyze_mrna_immunogenicity_and_safety`
+- **Safety Screening**: Allergenicity and toxicity prediction
+- **Immunogenicity Assessment**: TLR7 activation potential through GU-rich motif detection
+
+## Machine Learning and Agent Integration
+
+1. **Epitope Prediction Agents**: ML models trained on immunological databases for B-cell and T-cell epitope identification
+2. **Construct Design Agents**: Intelligent algorithms for epitope selection and combination optimization
+3. **Codon Optimization**: Statistical models based on human gene expression data
+4. **Safety Prediction**: ML classifiers for allergenicity and toxicity assessment
+
+## Expected Outputs
+
+1. **Processed spike protein sequence** (FASTA format)
+2. **Epitope predictions** with scores and HLA restrictions (CSV)
+3. **Optimized mRNA constructs** with design rationale (FASTA + report)
+4. **Codon-optimized sequences** with expression metrics
+5. **Secondary structure analysis** with stability predictions
+6. **Safety and immunogenicity report** with recommendations
+
+## Tool List to Execute:
+
+```python
+[
+    {
+        'name': 'fetch_and_process_viral_protein_sequence',
+        'args': {
+            'definer': 'BiologicalTargetDefiner()',
+            'source': 'ncbi',
+            'identifier': 'SARS-CoV-2,spike protein',
+            'description': 'COVID-19_spike_protein_analysis',
+            'domains': ['RBD']
+        }
+    },
+    {
+        'name': 'predict_epitopes_from_fasta',
+        'args': {
+            'fasta_file': 'COVID-19_spike_protein_analysis.fasta',
+            'hla_alleles': ['HLA-A*02
+------------------------------------------------------------
+TOOLS USED: ['fetch_and_process_viral_protein_sequence', 'predict_epitopes_from_fasta', 'design_mrna_constructs_from_epitopes', 'optimize_mrna_sequence', 'analyze_rna_secondary_structure', 'analyze_mrna_immunogenicity_and_safety']
+------------------------------------------------------------
+GENERATED CODE:
+import os
+import json
+import logging
+from typing import Dict, List, Optional, Tuple, Any
+from dataclasses import dataclass
+
+# Import tools
+from step1 import main as define_biological_target
+from step1 import *
+from step2 import main as predict_and_filter_epitopes 
+from step2 import *
+from step3 import main as design_mrna_construct
+from step3 import *
+from step4 import main as optimize_codon_usage
+from step4 import *
+from step5 import main as predict_secondary_structure_and_stability
+from step5 import *
+from step6 import main as evaluate_immunogenicity_and_safety
+from step6 import *
+
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+@dataclass
+class PipelineConfig:
+    """Configuration class for pipeline parameters"""
+    email: str
+    source: str 
+    identifier: str
+    description: str
+    domains: Optional[List[str]] = None
+    hla_alleles: Optional[List[str]] = None
+    species: str = "human"
+    optimize_for: str = "both"
+    min_score: float = 0.7
+    max_epitopes: int = 30
+    max_constructs: int = 10
+    save_outputs: bool = True
+    five_utr_length: int = 30
+
+def fetch_and_process_viral_protein_sequence(config: PipelineConfig) -> Dict:
+    """
+    Fetches and processes viral protein sequence using BiologicalTargetDefiner
+    """
+    try:
+        definer = BiologicalTargetDefiner(email=config.email)
+        result = define_biological_target(
+            definer=definer,
+            source=config.source,
+            identifier=config.identifier, 
+            description=config.description,
+            domains=config.domains
+        )
+        logger.info("Successfully fetched and processed viral protein sequence")
+        return result
+    except Exception as e:
+        logger.error(f"Error in fetch_and_process_viral_protein_sequence: {str(e)}")
+        return {"error": str(e)}
+
+def predict_epitopes_from_fasta(fasta_file: str, config: PipelineConfig) -> Dict:
+    """
+    Predicts epitopes from FASTA file
+    """
+    try:
+        result = predict_and_filter_epitopes(
+            fasta_file=fasta_file,
+            hla_alleles=config.hla_alleles
+        )
+        logger.info("Successfully predicted epitopes")
+        return result
+    except Exception as e:
+        logger.error(f"Error in predict_epitopes_from_fasta: {str(e)}")
+        return {"error": str(e)}
+
+def design_mrna_constructs_from_epitopes(epitope_csv: str, config: PipelineConfig) -> Dict:
+    """
+    Designs mRNA constructs from epitopes
+    """
+    try:
+        result, additional_info = design_mrna_construct(
+            epitope_csv_path=epitope_csv,
+            species=config.species,
+            optimize_for=config.optimize_for,
+            min_score=config.min_score,
+            max_epitopes=config.max_epitopes,
+            max_constructs=config.max_constructs
+        )
+        logger.info("Successfully designed mRNA constructs")
+        return {
+            "constructs": result,
+            "additional_info": additional_info
+        }
+    except Exception as e:
+        logger.error(f"Error in design_mrna_constructs_from_epitopes: {str(e)}")
+        return {"error": str(e)}
+
+def optimize_mrna_sequence(fasta_file: str, config: PipelineConfig) -> Dict:
+    """
+    Optimizes mRNA sequence
+    """
+    try:
+        result = optimize_codon_usage(
+            fasta_file_path=fasta_file,
+            save_outputs=config.save_outputs
+        )
+        logger.info("Successfully optimized mRNA sequence")
+        return result
+    except Exception as e:
+        logger.error(f"Error in optimize_mrna_sequence: {str(e)}")
+        return {"error": str(e)}
+
+def analyze_rna_secondary_structure(fasta_file: str, config: PipelineConfig) -> Dict:
+    """
+    Analyzes RNA secondary structure
+    """
+    try:
+        result = predict_secondary_structure_and_stability(
+            fasta_path=fasta_file,
+            five_utr_length=config.five_utr_length,
+            save_outputs=config.save_outputs
+        )
+        logger.info("Successfully analyzed RNA secondary structure")
+        return result
+    except Exception as e:
+        logger.error(f"Error in analyze_rna_secondary_structure: {str(e)}")
+        return {"error": str(e)}
+
+def analyze_mrna_immunogenicity_and_safety(fasta_file: str, config: PipelineConfig) -> Dict:
+    """
+    Analyzes mRNA immunogenicity and safety
+    """
+    try:
+        result = evaluate_immunogenicity_and_safety(
+            fasta_path=fasta_file,
+            save_outputs=config.save_outputs
+        )
+        logger.info("Successfully analyzed immunogenicity and safety")
+        return result
+    except Exception as e:
+        logger.error(f"Error in analyze_mrna_immunogenicity_and_safety: {str(e)}")
+        return {"error": str(e)}
+
+def run_pipeline(config: PipelineConfig, output_file: str = "pipeline_results.json") -> Tuple[str, Dict]:
+    """
+    Runs the complete pipeline with all tools
+    """
+    results = {}
+    
+    # Step 1: Fetch sequence
+    results["sequence"] = fetch_and_process_viral_protein_sequence(config)
+    
+    if isinstance(results["sequence"], dict) and "error" not in results["sequence"]:
+        fasta_file = results["sequence"]["fasta_file"]
+        
+        # Step 2: Predict epitopes
+        results["epitopes"] = predict_epitopes_from_fasta(fasta_file, config)
+        
+        if isinstance(results["epitopes"], dict) and "error" not in results["epitopes"]:
+            epitope_csv = results["epitopes"]["output_file"]
+            
+            # Step 3: Design constructs
+            results["constructs"] = design_mrna_constructs_from_epitopes(epitope_csv, config)
+            
+            if isinstance(results["constructs"], dict) and "error" not in results["constructs"]:
+                construct_fasta = results["constructs"]["fasta_file"]
+                
+                # Step 4: Optimize sequence
+                results["optimization"] = optimize_mrna_sequence(construct_fasta, config)
+                
+                # Step 5: Analyze structure
+                results["structure"] = analyze_rna_secondary_structure(construct_fasta, config)
+                
+                # Step 6: Analyze safety
+                results["safety"] = analyze_mrna_immunogenicity_and_safety(construct_fasta, config)
+
+    # Save results
+    with open(output_file, "w") as f:
+        json.dump(results, f, indent=2)
+        
+    return output_file, results
+
+if __name__ == "__main__":
+    # Example usage
+    config = PipelineConfig(
+        email="user@example.com",
+        source="ncbi",
+        identifier="SARS-CoV-2,spike protein",
+        description="SARS-CoV-2 Spike",
+        domains=["RBD"],
+        hla_alleles=["HLA-A*02:01", "HLA-B*07:02"]
+    )
+    
+    output_file, results = run_pipeline(config)
+    print(f"Pipeline results saved to: {output_file}")
+------------------------------------------------------------
+FINAL RESULT:
+
+=== Processing: SARS-CoV-2 Spike ===
+Pipeline results saved to: pipeline_results.json
+
+------------------------------------------------------------
+EXECUTION LOGS:
+[2025-06-16T11:53:32.703718] query_analysis: Analyzing query: analyze mRNA Vaccine Synthesis using Agents and Machine Learning: A Case Study for COVID-19...
+[2025-06-16T11:53:32.704095] path_decision: Selected path: complex_task - Contains complex task keywords
+[2025-06-16T11:53:32.705379] task_generation_start: Starting task generation and planning
+[2025-06-16T11:53:55.768101] task_generation_complete: Generated plan
+[2025-06-16T11:53:55.771029] code_generation_start: Starting code generation
+[2025-06-16T11:53:58.036405] tool_extraction: Extracted 6 tools: ['fetch_and_process_viral_protein_sequence', 'predict_epitopes_from_fasta', 'design_mrna_constructs_from_epitopes', 'optimize_mrna_sequence', 'analyze_rna_secondary_structure', 'analyze_mrna_immunogenicity_and_safety']
+[2025-06-16T11:57:36.242281] code_generation_complete: Generated code
+[2025-06-16T11:57:36.244694] code_execution_start: Starting code execution
+[2025-06-16T11:57:36.245201] main_codefile_created: Created main_code.py for execution
+[2025-06-16T11:57:40.490185] code_execution_failed: Failed with return code 1
+[2025-06-16T11:57:40.491298] flow_decision: Flow decision: debug
+[2025-06-16T11:57:40.493239] debug_start: Starting code debugging
+[2025-06-16T11:58:12.015103] debug_complete: Generated fixed code
+[2025-06-16T11:58:12.017186] code_execution_start: Starting code execution
+[2025-06-16T11:58:12.017839] main_codefile_created: Created main_code.py for execution
+[2025-06-16T11:58:15.793109] code_execution_success: Executed successfully
+[2025-06-16T11:58:15.794509] flow_decision: Flow decision: end
+[2025-06-16T11:58:15.796380] result_analysis_start: Starting result analysis and report generation
+------------------------------------------------------------
+============================================================
