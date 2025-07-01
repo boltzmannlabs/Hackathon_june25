@@ -35,7 +35,11 @@ class Agent:
         print(os.chdir("/home/ubuntu/prasanna/internal_hackathon/git_proj"))
         from dotenv import load_dotenv
         load_dotenv()
-        self.llm = ChatOpenAI(model_name="gpt-4o-mini")
+        self.llm = ChatBedrock(
+                model_id="us.anthropic.claude-3-5-sonnet-20241022-v2:0",
+                model_kwargs=dict(temperature=0),
+                client=self.bedrock_client
+            )
         self.bedrock_client = boto3.client(
                                 'bedrock-runtime', 
                                 region_name="us-east-1", 
